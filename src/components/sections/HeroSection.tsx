@@ -73,11 +73,21 @@ const HeroSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center gradient-bg particle-bg overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('/lovable-uploads/90331457-dada-4ee5-b4ee-c72d0395cabc.png')`,
+        backgroundSize: '90%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: 'rgb(0, 22, 43)'
+      }}
     >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-redbull-navy/30 z-0"></div>
+      
       <ParticleSystem />
       
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center z-10">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center z-10 relative">
         {/* Left Column - Content */}
         <div className="text-center lg:text-left space-y-8">
           <h1 
@@ -121,14 +131,14 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Column - 3D Can */}
-        <div className="flex justify-center">
+        {/* Right Column - 3D Can (hidden on smaller screens to avoid overlap with background image) */}
+        <div className="hidden xl:flex justify-center">
           <RedBullCan3D />
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-redbull-red rounded-full flex justify-center">
           <div className="w-1 h-3 bg-redbull-red rounded-full mt-2 animate-pulse"></div>
         </div>
