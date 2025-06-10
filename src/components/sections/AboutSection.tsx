@@ -126,15 +126,17 @@ const AboutSection = () => {
               {/* Morphing Animation Container */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-40 h-40 relative">
-                  {/* RedBull Can to Token Morph */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg transform rotate-12 animate-float">
-                    <div className="absolute inset-2 bg-gradient-to-b from-red-500 to-red-700 rounded flex items-center justify-center">
-                      <span className="text-white font-rajdhani font-bold text-xs">RB</span>
-                    </div>
+                  {/* RedBull Can Image */}
+                  <div className="absolute inset-0 flex items-center justify-center animate-float">
+                    <img 
+                      src="/lovable-uploads/d77756ee-49fb-4cfb-b2b7-81b64d16386d.png"
+                      alt="Red Bull Energy Drink with Crypto Coins"
+                      className="w-32 h-auto object-contain transform rotate-12"
+                    />
                   </div>
                   
                   {/* Token Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-redbull-red to-red-700 rounded-full opacity-70 animate-pulse-glow">
+                  <div className="absolute inset-0 bg-gradient-to-br from-redbull-red to-red-700 rounded-full opacity-30 animate-pulse-glow">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-white font-orbitron font-bold text-2xl">RBL</span>
                     </div>
