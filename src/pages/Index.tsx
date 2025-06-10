@@ -1,12 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import HeroSection from '@/components/sections/HeroSection';
+import AboutSection from '@/components/sections/AboutSection';
+import AirdropMechanics from '@/components/sections/AirdropMechanics';
+import TokenomicsChart from '@/components/sections/TokenomicsChart';
+import NFTGallery from '@/components/sections/NFTGallery';
+import AirdropDashboard from '@/components/sections/AirdropDashboard';
+import FOMOTriggerBar from '@/components/ui/FOMOTriggerBar';
+import CustomCursor from '@/components/ui/CustomCursor';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  useEffect(() => {
+    // Initialize GSAP animations
+    gsap.set("body", { overflow: "hidden" });
+    
+    // Page load animation
+    const tl = gsap.timeline();
+    tl.to("body", { overflow: "auto", duration: 0.1, delay: 0.5 });
+    
+    // Smooth scrolling setup
+    ScrollTrigger.normalizeScroll(true);
+    
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-redbull-navy text-redbull-white custom-cursor overflow-x-hidden">
+      <CustomCursor />
+      <FOMOTriggerBar />
+      
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <AirdropMechanics />
+        <TokenomicsChart />
+        <NFTGallery />
+        <AirdropDashboard />
+      </main>
     </div>
   );
 };
