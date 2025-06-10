@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -92,21 +91,20 @@ const HeroSection = () => {
         <div className="text-center lg:text-left space-y-8">
           <h1 
             ref={headlineRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-rajdhani font-bold leading-tight neon-text"
+            className="text-5xl md:text-7xl lg:text-8xl font-rajdhani font-bold leading-tight text-white opacity-80"
           >
-            IGNITE YOUR
+            FUEL
             <br />
-            <span className="text-redbull-red">ENERGY</span>
+            YOUR
             <br />
-            IN WEB3
+            FUTURE
           </h1>
           
           <p 
             ref={sublineRef}
             className="text-xl md:text-2xl font-inter text-gray-300 max-w-lg mx-auto lg:mx-0"
           >
-            Join the ultimate RedBull Energy Crypto Airdrop and unlock exclusive NFTs, 
-            rewards, and Web3 experiences powered by pure adrenaline.
+            Claim exclusive crypto rewards, NFTs, and much more digital adrenaline experiences — only with Red Bull.
           </p>
 
           <div ref={ctaRef} className="space-y-6">
@@ -115,15 +113,14 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-redbull-red hover:bg-redbull-red/90 text-white font-rajdhani font-bold text-lg px-8 py-4 neon-glow transition-all duration-300 hover:scale-105"
+                className="bg-redbull-red hover:bg-redbull-red/90 text-white font-rajdhani font-bold text-lg px-8 py-4 transition-all duration-300 hover:scale-105"
               >
                 CLAIM YOUR AIRDROP
               </Button>
               
               <Button 
-                variant="outline"
                 size="lg"
-                className="border-redbull-red text-redbull-red hover:bg-redbull-red hover:text-white font-rajdhani font-bold text-lg px-8 py-4 transition-all duration-300"
+                className="bg-redbull-red hover:bg-redbull-red/90 text-white font-rajdhani font-bold text-lg px-8 py-4 transition-all duration-300"
               >
                 LEARN MORE
               </Button>
