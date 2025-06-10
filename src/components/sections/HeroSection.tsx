@@ -76,14 +76,14 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url('/lovable-uploads/90331457-dada-4ee5-b4ee-c72d0395cabc.png')`,
-        backgroundSize: '90%',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: 'rgb(0, 22, 43)'
       }}
     >
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-redbull-navy/30 z-0"></div>
+      <div className="absolute inset-0 bg-redbull-navy/20 z-0"></div>
       
       <ParticleSystem />
       
